@@ -1,13 +1,13 @@
 object Form1: TForm1
-  Left = 238
-  Height = 484
-  Top = 285
+  Left = 370
+  Height = 315
+  Top = 61
   Width = 664
   Caption = 'Form1'
-  ClientHeight = 484
+  ClientHeight = 315
   ClientWidth = 664
   OnCreate = FormCreate
-  LCLVersion = '2.0.8.0'
+  LCLVersion = '2.0.6.0'
   object DBGrid1: TDBGrid
     Left = 0
     Height = 248
@@ -21,7 +21,7 @@ object Form1: TForm1
   end
   object Button1: TButton
     Left = 8
-    Height = 97
+    Height = 56
     Top = 253
     Width = 75
     Caption = 'Книги'
@@ -30,7 +30,7 @@ object Form1: TForm1
   end
   object Button2: TButton
     Left = 96
-    Height = 97
+    Height = 56
     Top = 253
     Width = 75
     Caption = 'Память'
@@ -39,12 +39,42 @@ object Form1: TForm1
   end
   object Button3: TButton
     Left = 184
-    Height = 97
+    Height = 56
     Top = 253
     Width = 75
     Caption = 'Выдача'
     OnClick = Button3Click
     TabOrder = 3
+  end
+  object Edit1: TEdit
+    Left = 272
+    Height = 21
+    Top = 256
+    Width = 136
+    OnChange = Edit1Change
+    TabOrder = 4
+  end
+  object Edit2: TEdit
+    Left = 272
+    Height = 21
+    Top = 288
+    Width = 136
+    OnChange = Edit2Change
+    TabOrder = 5
+  end
+  object Label1: TLabel
+    Left = 416
+    Height = 1
+    Top = 296
+    Width = 1
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 416
+    Height = 1
+    Top = 264
+    Width = 1
+    ParentColor = False
   end
   object MySQL57Connection1: TMySQL57Connection
     Connected = True
@@ -60,26 +90,21 @@ object Form1: TForm1
     CharSet = 'utf8'
     HostName = '192.168.0.26'
     SkipLibraryVersionCheck = True
-    left = 32
-    top = 200
+    left = 96
   end
   object DataSource1: TDataSource
     DataSet = SQLQuery1
-    left = 33
-    top = 80
+    left = 32
   end
   object SQLTransaction1: TSQLTransaction
     Active = False
     Database = MySQL57Connection1
-    left = 32
-    top = 136
+    left = 64
   end
   object SQLQuery1: TSQLQuery
     FieldDefs = <>
     Database = MySQL57Connection1
     Transaction = SQLTransaction1
     Params = <>
-    left = 32
-    top = 16
   end
 end
